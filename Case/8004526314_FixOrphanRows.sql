@@ -29,7 +29,7 @@ Description:		The following procedure either reports or fixes the following use 
 Date:				06/24/2015
 Disclaimer:			<To be entered by legal>	
 
-Before Executing:	Place this script inside a new query window and press CTRL + M. 
+Before Executing:	Place this script inside a new query window and press CTR + SHIFT + M. 
 					Then type the name of your X3 folder.
 					Then press F5 to execute and build the script. 
 
