@@ -1,5 +1,4 @@
 /********************************************************************************************
-Author:			Sage																	
 Description:		The following procedure either reports or fixes the following use cases:
 					-- 1. SORDERP where missing SORDER
 					-- 2. SORDERQ where missing SORDER	
@@ -29,6 +28,12 @@ Description:		The following procedure either reports or fixes the following use 
 																
 Date:				06/24/2015
 Disclaimer:			<To be entered by legal>	
+
+Before Executing:	Place this script inside a new query window and press CTRL + M. 
+					Then type the name of your X3 folder
+
+Execution Example:	exec PILOT.uspFixOrphanSalesOrderRows @DiagMode = 0
+
 ********************************************************************************************/
 	
 IF OBJECT_ID('<Schema Name, SYSNAME, DEMO>.uspFixOrphanSalesOrderRows', 'P') IS NOT NULL
