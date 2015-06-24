@@ -203,7 +203,7 @@ BEGIN
 
 			EXEC sys.sp_addextendedproperty 
 				@name = 'Use Case:  4', 
-				@value = 'Log of SORDERPQ records that where missing SORDERP correlations. This will leave SORDERP with records that only have SORDERP matches at the line level', 
+				@value = 'Log of SORDERQ records that where missing SORDERP correlations.', 
 				@level0type = 'Schema', 
 				@level0name = '<Schema Name, SYSNAME, DEMO>',
 				@level1type = 'TABLE', 
