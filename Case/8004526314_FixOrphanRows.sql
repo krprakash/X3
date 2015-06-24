@@ -30,7 +30,8 @@ Date:				06/24/2015
 Disclaimer:			<To be entered by legal>	
 
 Before Executing:	Place this script inside a new query window and press CTRL + M. 
-					Then type the name of your X3 folder
+					Then type the name of your X3 folder.
+					Then press F5 to execute and build the script. 
 
 Execution Example:	exec PILOT.uspFixOrphanSalesOrderRows @DiagMode = 0
 
