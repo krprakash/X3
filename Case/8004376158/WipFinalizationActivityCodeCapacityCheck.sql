@@ -67,6 +67,8 @@ SET @NMIO_FormulaResult =
 	SELECT NMI_MAX * ONA_MAX FROM #MaxListings
 )
 
+
+/******************************* Table Creation  *****************************/
 IF OBJECT_ID('tempdb..#MaxListings', 'U') IS NOT NULL
 BEGIN
 	DROP TABLE #MaxListings
@@ -89,12 +91,17 @@ SELECT
 INTO #MaxListings
 
 
-/**************************************** Output *****************************/
+/********************************* Output ************************************/
 SELECT * FROM #MaxListings
 
 
 
-SELECT MFGNUM_0, COUNT(MFGTRKNUM_0) CntMfgTrkNum, 32000 * (SELECT FROM (VALUES (1, @MAT_MAX, @MAC_MAX, @LAB_MAX)))
+SELECT 
+	MFGNUM_0, 
+	COUNT(MFGTRKNUM_0) CntMfgTrkNum, 
+	'These Work Orders cannot be costed' CannotBeCosted
 FROM ECCPROD2.MFGMATTRK mt
 GROUP BY mt.MFGNUM_0
+HAVING COUNT(MFGTRKNUM_0) > @NMM_MAX
 ORDER BY COUNT(MFGTRKNUM_0) DESC
+
