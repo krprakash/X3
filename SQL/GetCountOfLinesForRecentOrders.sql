@@ -1,0 +1,7 @@
+-- Get Count of lines for recent Sales Orders
+SELECT TOP 10  h.SOHNUM_0, COUNT(q.SOHNUM_0) CountOfLines
+FROM SEED.SORDER h
+	INNER JOIN SEED.SORDERQ q
+		ON h.SOHNUM_0 = q.SOHNUM_0
+GROUP BY h.SOHNUM_0, h.ROWID 
+ORDER BY h.ROWID DESC
