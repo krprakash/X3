@@ -1,1 +1,2 @@
-Get-WmiObject win32_service | ?{$_.Name -like '*mongo*'} | Select Name, DisplayName, State, PathName
+$ServiceName = "*mongo*"
+Get-WmiObject win32_service | ?{$_.Name -like $ServiceName} | select Name, DisplayName, State, PathName
