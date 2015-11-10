@@ -1,0 +1,4 @@
+Local Integer INUM1
+INUM1 = 10
+
+Infbox num$(INUM1) + " Work Orders left to create"
