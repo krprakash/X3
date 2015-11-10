@@ -1,0 +1,6 @@
+Local Libelle RESPONSE
+Qstbox "Hello world!" -nomap Using [L]RESPONSE
+Case [L]RESPONSE
+   When 1: Infbox "You selected yes" 
+   When 2: Infbox "You selected no"
+Endcase
