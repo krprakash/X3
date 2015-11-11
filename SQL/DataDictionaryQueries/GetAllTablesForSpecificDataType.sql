@@ -1,3 +1,4 @@
+
 -- Find all X3 tables that have a column with a specific data type
 -- I've used this in the past to determine a wide variety of issues. One 
 -- use might be to find any import object that imports a certain kind of data, 
@@ -25,6 +26,6 @@ FROM DEMO.ATABZON tz
 		ON tz.NOCOURT_0 = txt3.NUMERO_0
 		AND txt3.LAN_0 = 'ENG'
 WHERE 
-	--t.CODTYP_0 in ('CLC', 'AC0', 'CLE', 'CLT', 'CLX', 'HD8')
+	--t.CODTYP_0 in ('CLC', 'AC0', 'CLE', 'CLT', 'CLX', 'HD8') -- optional: If you know data type
 	LOWER(txt.TEXTE_0) LIKE '%clob%'
 ORDER BY tz.CODFIC_0, tz.CODZONE_0
